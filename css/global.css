@@ -8,7 +8,7 @@ body {
   height: 100%;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
-  background-image: url(/webp/background.webp);
+  background-image: url("../webp/background.webp");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
