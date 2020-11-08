@@ -1,0 +1,196 @@
+.page-body {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.mdc-layout-grid {
+  width: 95vw;
+  justify-content: center;
+  transition: all 300ms cubic-bezier(0.4, 0.0, 0.2, 1);
+  max-width: 1920px
+}
+
+.mdc-layout-grid .mdc-layout-grid__cell--span-4 {
+  background-color: rgba(0, 0, 0, .8);
+  border-radius: .5rem;
+  transition: all 0.4s ease;
+  padding: 0 1rem 1rem;
+}
+
+.mdc-layout-grid h4.mdc-layout-grid__header {
+  place-self: center;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #dedede;
+  margin-bottom: 0;
+  padding: .5rem;
+}
+
+.mdc-layout-grid .player-cell, .mdc-layout-grid .regular-cell {
+  height: 60px;
+  width: auto;
+  color: white;
+  border-radius: 15px;
+  margin: 6px;
+  padding: 8px 12px;
+  background-color: rgba(0, 0, 0, .8);
+  font-family: proxima nova, Helvetica, Serif;
+}
+
+.mdc-layout-grid .player-cell {
+  max-width: 600px;
+  display: flex;
+  font-weight: 700;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  text-decoration: none;
+  margin: 12px auto;
+}
+
+.mdc-layout-grid .player-cell .player-avatar {
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.mdc-layout-grid .player-cell .player-info {
+  color: #dedede;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  max-width: calc(100% - 120px);
+}
+
+.mdc-layout-grid .player-cell .player-info .player-name, .mdc-layout-grid .player-cell .stat-cell .player-level, .mdc-layout-grid .player-cell .stat-cell .player-chips {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.mdc-layout-grid .player-cell .stat-cell {
+  color: white;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-self: flex-end;
+  max-width: 120px;
+}
+
+.mdc-layout-grid .player-cell .stat-cell img {
+  margin: 0 8px;
+}
+
+.regular-cell {
+  min-height: 90px;
+  width: 100%;
+  padding: .5rem;
+  margin: 1rem 0 1rem 0 !important;
+}
+
+.mdc-layout-grid #explanation-cell:not(.player-name) {
+  font-family: proxima nova, Helvetica, Serif;
+  font-weight: 400;
+  color: #b6b6b7;
+}
+
+.mdc-layout-grid #explanation-cell p:first-child {
+  margin-top: 12px;
+}
+
+.mdc-layout-grid #explanation-cell p {
+  font-size: .942rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  line-height: 1.2;
+  display: flex;
+}
+
+.mdc-layout-grid #explanation-cell h5 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.mdc-layout-grid .player-cell img:not(.stat-cell img) {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-right: .5rem;
+}
+
+#footer.page-footer  {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, .8);
+  border-radius: .5rem;
+  width: calc(85vw - 48px);
+  max-width: calc(1920px - 48px);
+  padding: 1rem;
+}
+
+#footer .tos-info {
+  margin: 0;
+  text-align: center;
+}
+
+@media only screen and (max-width: 719px) {
+  .mdc-layout-grid {
+    width: 95vw;
+  }
+  .mdc-layout-grid__cell--span-4, .mdc-layout-grid__cell--span-4-desktop {
+    grid-column-end: span 12;
+  }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 839px) {
+  .mdc-layout-grid {
+    grid-column-end: span 6;
+  }
+  .mdc-layout-grid #explanation-cell {
+    grid-column-end: span 8;
+  }
+}
+@media only screen and (min-width: 840px) and (max-width: 1279px) {
+  .mdc-layout-grid__cell--span-4, .mdc-layout-grid__cell--span-4-desktop, .mdc-layout-grid .regular-cell {
+    grid-column-end: span 6;
+  }
+  .mdc-layout-grid #explanation-cell {
+    grid-column-end: span 12;
+  }
+}
+
+@media only screen and (min-width: 840px) and (max-with: 1439px) {
+  .mdc-layout-grid {
+    width: 90vw;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .mdc-layout-grid__cell--span-4, .mdc-layout-grid__cell--span-4-desktop {
+    grid-column-end: span 4;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .mdc-layout-grid {
+    width: 85vw;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  *:not(.tos-link) {
+    font-size: 20px;
+  }
+  a, span, p {
+    animation: all 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+  }
+  .mdc-layout-grid .player-cell .stat-cell {
+    max-width: 148px;
+  }
+}

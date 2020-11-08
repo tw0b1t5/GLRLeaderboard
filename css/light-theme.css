@@ -1,0 +1,11 @@
+body {
+  --background-color: #fff;
+  --surface: ;
+  --surface-secondary: ;
+  --success: ;
+  --error: ;
+  --call-to-action: ;
+  --high-emphasis-text: rgba(0, 0, 0, 0.87);
+  --medium-emphasis-text: rgba(0, 0, 0, 0.6);
+  --disabled-text: rgba(0, 0, 0, 0.38);
+}
