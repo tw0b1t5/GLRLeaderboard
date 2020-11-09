@@ -102,6 +102,8 @@ body.dark .navbar .nav-links #user-dropdown.nav-item {
   display: inline-flex;
   vertical-align: middle;
   margin-right: 4px;
+  width: 24px;
+  height: 24px;
 }
 
 .navbar .nav-links #user-dropdown.nav-item {
