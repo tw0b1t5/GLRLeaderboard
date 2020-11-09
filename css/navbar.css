@@ -30,6 +30,8 @@ body.dark .navbar .nav-links #user-dropdown.nav-item {
   align-items: center;
   box-shadow: 0 5px 12px #000;
   z-index: 9;
+  backdrop-filter: blur(1rem);
+    -moz-backdrop-filter: blur(1rem);
 }
 
 .navbar .navbar-brand img {
@@ -52,6 +54,7 @@ body.dark .navbar .nav-links #user-dropdown.nav-item {
   display: flex;
 }
 
+/** Skip navigation tab button **/
 .navbar .skipnav {
   opacity: 0;
   pointer-events: none;
@@ -81,6 +84,7 @@ body.dark .navbar .nav-links #user-dropdown.nav-item {
   margin: 0;
 }
 
+/** Navbar links **/
 .navbar .nav-links {
   display: flex;
   justify-content: flex-end;
@@ -92,6 +96,12 @@ body.dark .navbar .nav-links #user-dropdown.nav-item {
   padding: 0;
   height: max(48px);
   align-items: center;
+}
+
+.navbar .nav-links .nav-item .material-icons {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-right: 4px;
 }
 
 .navbar .nav-links #user-dropdown.nav-item {
@@ -143,6 +153,7 @@ body.dark .navbar .nav-links #user-dropdown.nav-item {
   display: none;
 }
 
+/* Responsive navbar */
 @media only screen and (min-width: 520px) {
   .navbar .skipnav {
     width: 88px;
@@ -176,15 +187,15 @@ body.dark .navbar .nav-links #user-dropdown.nav-item {
 
 @media only screen and (max-width: 839px) {
   .navbar .nav-links #login.nav-item a {
-    content: url("/svg/login_white_24px.svg");
+    content: url("../svg/login_white_24px.svg");
   }
-  .navbar .nav-links #signup.nav-item a {
+  .navbar .nav-links #register.nav-item a {
     content: url("https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_account_circle_white_24px.svg");
   }
   .navbar .nav-links #home.nav-item a {
     content: url("https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_home_white_24px.svg");
   }
-  .navbar .nav-links #project.nav-item a.nav-link {
+  .navbar .nav-links #friends.nav-item a {
     content: url("https://storage.googleapis.com/material-icons/external-assets/v4/icons/svg/ic_group_white_24px.svg");
   }
   .navbar .nav-links #shop.nav-item a {
