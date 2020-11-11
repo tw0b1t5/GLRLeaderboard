@@ -17,7 +17,7 @@ body {
   font-family: var(--font-family-sans-serif);
 }
 
-/* Preloading media query images */
+/* Preloading media query images *
 body::after{
   position: absolute;
   width: 0;
